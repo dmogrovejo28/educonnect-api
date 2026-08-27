@@ -1,0 +1,246 @@
+{
+  "info": {
+    "_postman_id": "869a099a-0e76-4a20-864f-b2f4a9226692",
+    "name": "exam_tcs_eduCollection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "9895457"
+  },
+  "item": [
+    {
+      "name": "estudiantes",
+      "item": [
+        {
+          "name": "crear estudiante",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Isaac\",\r\n    \"email\": \"dmogrovejo.28@gmail.com\",\r\n    \"password\":1234567890\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/estudiantes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "estudiantes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "obtener estudiantes",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "eliminar estudiante",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "Admin1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "admin@educonnect.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Isaac\",\r\n    \"email\": \"dmogrovejo.28@gmail.com\",\r\n    \"password\":1234567890\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/estudiantes/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "estudiantes",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "cursos",
+      "item": [
+        {
+          "name": "crear curso",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "Admin1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "admin@educonnect.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"codigo\": \"Fundamentos-101\",\r\n    \"titulo\": \"Patrones de programacion\",\r\n    \"descripcion\": \"Curso de fundamentos\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/cursos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "cursos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "obtener cursos",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "inscripciones",
+      "item": [
+        {
+          "name": "crear inscripciones",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "Admin1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "admin@educonnect.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"cursoId\":\"2\",\r\n  \"estudianteId\":3\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/inscripciones",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "inscripciones"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "obtener matricula",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "eliminar inscripcion",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "Admin1234",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "admin@educonnect.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"cursoId\":\"2\",\r\n  \"estudianteId\":3\r\n\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/inscripciones/8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "inscripciones",
+                "8"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
